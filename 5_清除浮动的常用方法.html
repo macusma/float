@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>清除浮动的常用方法</title>
+    <style>
+        .clear {
+            /*clear: both; 方法一*/
+        }
+        .container {
+            width: 500px;
+            /*height: 200px; 方法四，不推荐使用*/
+            border: 2px solid #333;
+            /*overflow: hidden;方法二*/
+            zoom: 1;
+            /*float: left;方法五，不推荐使用*/
+        }
+        /*.clearfix:after {
+            content: '.';
+            height: 0;
+            display: block;
+            visibility: hidden;
+            clear: both;
+        }*/
+        .box01 {
+            width: 100px;
+            height: 100px;
+            background: blue;
+            color: #fff;
+            float: left;
+        }
+        .box02 {
+            width: 100px;
+            height: 100px;
+            background: red;
+            color: #fff;
+            float: left;
+        }
+        .box03 {
+            width: 100px;
+            height: 100px;
+            background: orange;
+            color: #fff;
+            float: left;
+        }
+        .box04 {
+            width: 500px;
+            height: 200px;
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container clearfix">
+        <div class="box01">11111</div>
+        <div class="box02">22222</div>
+        <div class="box03">33333</div>
+        <div class="clear"></div>
+    </div>
+    <div class="box04">44444</div>
+</body>
+</html>
